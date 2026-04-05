@@ -4,13 +4,13 @@ on:
   push:
     branches: [main]
     paths:
-      - 'self-improving-openclaw/**'
+      - 'new-self-improving/**'
       - 'scripts/**'
       - '.github/workflows/validate-skill.yml'
       - 'README.md'
   pull_request:
     paths:
-      - 'self-improving-openclaw/**'
+      - 'new-self-improving/**'
       - 'scripts/**'
       - '.github/workflows/validate-skill.yml'
       - 'README.md'

@@ -7,8 +7,8 @@ trap 'rm -rf "$TEST_ROOT"' EXIT
 
 echo "Smoke test workspace: $TEST_ROOT"
 
-bash "$ROOT/self-improving-openclaw/scripts/init-workspace.sh" "$TEST_ROOT"
-bash "$ROOT/self-improving-openclaw/scripts/init-workspace.sh" "$TEST_ROOT"
+bash "$ROOT/new-self-improving/scripts/init-workspace.sh" "$TEST_ROOT"
+bash "$ROOT/new-self-improving/scripts/init-workspace.sh" "$TEST_ROOT"
 
 required=(
   "$TEST_ROOT/.learnings/LEARNINGS.md"

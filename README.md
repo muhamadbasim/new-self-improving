@@ -1,10 +1,10 @@
 # new-self-improving
 
-A dedicated repository for the **Self-Improving OpenClaw** skill.
+A dedicated repository for the **new-self-improving** skill.
 
 ## What this repo contains
 
-- `self-improving-openclaw/` — the published AgentSkill
+- `new-self-improving/` — the published AgentSkill
 - structured learning loop for OpenClaw agents:
   - raw intake in `.learnings/`
   - tiered memory in `.self-improving/`
@@ -14,8 +14,8 @@ A dedicated repository for the **Self-Improving OpenClaw** skill.
 
 ## Published skill
 
-- ClawHub: <https://clawhub.ai/muhamadbasim/self-improving-openclaw>
-- Slug: `self-improving-openclaw`
+- ClawHub: <https://clawhub.ai/muhamadbasim/new-self-improving>
+- Slug: `new-self-improving`
 - Current version: `1.0.0`
 
 ## Repo layout
@@ -28,7 +28,7 @@ new-self-improving/
 │   ├── publish.sh
 │   ├── smoke-test.sh
 │   └── validate-skill.py
-└── self-improving-openclaw/
+└── new-self-improving/
     ├── SKILL.md
     ├── references/
     ├── scripts/
@@ -38,13 +38,13 @@ new-self-improving/
 ## Install from ClawHub
 
 ```bash
-npx clawhub@latest install self-improving-openclaw
+npx clawhub@latest install new-self-improving
 ```
 
 For a separate workspace:
 
 ```bash
-npx clawhub@latest --workdir /path/to/workspace install self-improving-openclaw
+npx clawhub@latest --workdir /path/to/workspace install new-self-improving
 ```
 
 ## Initialize workspace state
@@ -52,7 +52,7 @@ npx clawhub@latest --workdir /path/to/workspace install self-improving-openclaw
 After installation, run:
 
 ```bash
-bash skills/self-improving-openclaw/scripts/init-workspace.sh
+bash skills/new-self-improving/scripts/init-workspace.sh
 ```
 
 This creates:
@@ -74,7 +74,7 @@ bash scripts/smoke-test.sh
 Optional OpenClaw validator:
 
 ```bash
-python3 ~/.nvm/versions/node/v22.22.1/lib/node_modules/openclaw/skills/skill-creator/scripts/quick_validate.py ./self-improving-openclaw
+python3 ~/.nvm/versions/node/v22.22.1/lib/node_modules/openclaw/skills/skill-creator/scripts/quick_validate.py ./new-self-improving
 ```
 
 ## Publish from this repo

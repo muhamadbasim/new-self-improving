@@ -15,9 +15,9 @@ if [[ -z "$CHANGELOG" ]]; then
 fi
 
 cd "$ROOT"
-exec npx clawhub@latest publish ./self-improving-openclaw \
-  --slug self-improving-openclaw \
-  --name "Self-Improving OpenClaw" \
+exec npx clawhub@latest publish ./new-self-improving \
+  --slug new-self-improving \
+  --name "new-self-improving" \
   --version "$VERSION" \
   --tags latest \
   --changelog "$CHANGELOG"

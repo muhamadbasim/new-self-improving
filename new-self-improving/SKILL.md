@@ -1,5 +1,5 @@
 ---
-name: self-improving-openclaw
+name: new-self-improving
 description: >-
   Log corrections, errors, feature requests, and recurring patterns into
   structured workspace learning files, then promote stable patterns into

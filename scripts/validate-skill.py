@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_DIR = ROOT / "self-improving-openclaw"
+SKILL_DIR = ROOT / "new-self-improving"
 SKILL_MD = SKILL_DIR / "SKILL.md"
 
 REQUIRED_FILES = [
