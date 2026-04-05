@@ -1,0 +1,34 @@
+name: validate-skill
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'self-improving-openclaw/**'
+      - 'scripts/**'
+      - '.github/workflows/validate-skill.yml'
+      - 'README.md'
+  pull_request:
+    paths:
+      - 'self-improving-openclaw/**'
+      - 'scripts/**'
+      - '.github/workflows/validate-skill.yml'
+      - 'README.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate skill structure
+        run: python3 scripts/validate-skill.py
+
+      - name: Run smoke test
+        run: bash scripts/smoke-test.sh

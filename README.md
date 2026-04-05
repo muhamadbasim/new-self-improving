@@ -22,7 +22,12 @@ A dedicated repository for the **Self-Improving OpenClaw** skill.
 
 ```text
 new-self-improving/
+├── .github/workflows/validate-skill.yml
 ├── README.md
+├── scripts/
+│   ├── publish.sh
+│   ├── smoke-test.sh
+│   └── validate-skill.py
 └── self-improving-openclaw/
     ├── SKILL.md
     ├── references/
@@ -59,22 +64,48 @@ without overwriting existing files.
 
 ## Local validation
 
-Validate the bundled skill locally with the OpenClaw skill-creator validator:
+Quick repo-native validation:
+
+```bash
+python3 scripts/validate-skill.py
+bash scripts/smoke-test.sh
+```
+
+Optional OpenClaw validator:
 
 ```bash
 python3 ~/.nvm/versions/node/v22.22.1/lib/node_modules/openclaw/skills/skill-creator/scripts/quick_validate.py ./self-improving-openclaw
 ```
 
-## Smoke test
+## Publish from this repo
 
-Example install + init test in a temporary workspace:
+If you are already logged into ClawHub:
 
 ```bash
-mkdir -p /tmp/self-improving-test
-npx clawhub@latest --workdir /tmp/self-improving-test install self-improving-openclaw
-bash /tmp/self-improving-test/skills/self-improving-openclaw/scripts/init-workspace.sh /tmp/self-improving-test
-find /tmp/self-improving-test -maxdepth 2 -type f | sort
+bash scripts/publish.sh 1.0.1 "Short changelog here"
 ```
+
+If not logged in yet:
+
+```bash
+npx clawhub@latest login
+bash scripts/publish.sh 1.0.1 "Short changelog here"
+```
+
+## CI
+
+This repo includes a GitHub Actions workflow:
+
+- `.github/workflows/validate-skill.yml`
+
+It automatically:
+- validates the skill structure
+- runs the init script in a temporary workspace
+- verifies the init script is idempotent
+
+## GitHub release
+
+- Repo tag/release target: `v1.0.0`
 
 ## Why this exists
 
