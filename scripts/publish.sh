@@ -15,9 +15,10 @@ if [[ -z "$CHANGELOG" ]]; then
 fi
 
 cd "$ROOT"
-exec npx clawhub@latest publish ./new-self-improving \
+exec npx clawhub@latest publish \
   --slug new-self-improving \
   --name "new-self-improving" \
   --version "$VERSION" \
   --tags latest \
-  --changelog "$CHANGELOG"
+  --changelog "$CHANGELOG" \
+  ./new-self-improving
