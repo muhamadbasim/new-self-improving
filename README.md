@@ -16,7 +16,13 @@ A dedicated repository for the **new-self-improving** skill.
 
 - ClawHub: <https://clawhub.ai/muhamadbasim/new-self-improving>
 - Slug: `new-self-improving`
-- Current version: `1.0.0`
+- Current version: `1.0.1`
+
+## Latest release
+
+- Release page: <https://github.com/muhamadbasim/new-self-improving/releases/tag/v1.0.1>
+- Download `.skill`: <https://github.com/muhamadbasim/new-self-improving/releases/download/v1.0.1/new-self-improving.skill>
+- Download `.zip`: <https://github.com/muhamadbasim/new-self-improving/releases/download/v1.0.1/new-self-improving.zip>
 
 ## Repo layout
 
@@ -82,14 +88,14 @@ python3 ~/.nvm/versions/node/v22.22.1/lib/node_modules/openclaw/skills/skill-cre
 If you are already logged into ClawHub:
 
 ```bash
-bash scripts/publish.sh 1.0.1 "Short changelog here"
+bash scripts/publish.sh 1.0.2 "Short changelog here"
 ```
 
 If not logged in yet:
 
 ```bash
 npx clawhub@latest login
-bash scripts/publish.sh 1.0.1 "Short changelog here"
+bash scripts/publish.sh 1.0.2 "Short changelog here"
 ```
 
 ## CI
@@ -105,7 +111,8 @@ It automatically:
 
 ## GitHub release
 
-- Repo tag/release target: `v1.0.0`
+- Current release: <https://github.com/muhamadbasim/new-self-improving/releases/tag/v1.0.1>
+- Repo tag/release target: `v1.0.1`
 
 ## Why this exists
 
